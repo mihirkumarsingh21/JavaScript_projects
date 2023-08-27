@@ -1,0 +1,53 @@
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    background-color: #808080;
+    color: #000000;
+}
+
+input {
+    border: none;
+    padding: 4px;
+    border-radius: 6px;
+}
+
+label {
+    font-size: 18px;
+}
+
+label:hover {
+    cursor: pointer;
+    color:#a52a2a;
+}
+input:hover {
+    cursor: pointer;
+   
+}
+
+#results {
+    color: #ffffff;
+    font-size: 20px;
+    position: relative;
+    left: 100px;
+    line-height: 50px;
+}
+
+#button {
+    padding: 4px 44px;
+    border-radius: 6px;
+    border: none;
+    font-size: 17px;
+    text-align: center;
+    position: relative;
+    left: 120px;
+}
+
+#button:hover {
+    cursor: pointer;
+    color: #ffffff;
+    background-color: #008000;
+}
+
