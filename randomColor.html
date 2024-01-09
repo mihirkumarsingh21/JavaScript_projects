@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async</title>
+</head>
+<body style="background-color: #000000; color: #ffffffff; ">
+    <h1>Random color generator.!</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    let stopInterval;
+    const randomColorGenerator = () => {
+        
+        const hexValue = "0123456789ABCDEF";
+        let color = "#";
+
+        for(let i = 0; i <= 5; i++) {
+            color += hexValue[Math.floor(Math.random() * 16)]
+        }
+        return color;
+    }
+
+    const startChangingColor = () => {
+        document.body.style.backgroundColor = randomColorGenerator();
+      }
+
+    document.querySelector("#start").addEventListener("click", () => {
+        if(stopInterval == null) {
+            stopInterval = setInterval(startChangingColor, 1000);
+        }
+    })
+
+    document.querySelector("#stop").addEventListener("click", () => {
+        clearInterval(stopInterval);
+        stopInterval = null;
+    })
+
+</script>
+</html>
